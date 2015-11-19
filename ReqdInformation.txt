@@ -1,0 +1,10 @@
+CHATTER
+
+Github Link
+https://github.com/bobinbc/Chatter.git
+
+JIRA Link
+https://chatter.atlassian.net/secure/Dashboard.jspa
+
+Parse Link
+https://www.parse.com/apps/chatter--161/collections
