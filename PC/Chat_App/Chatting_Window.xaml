@@ -1,0 +1,58 @@
+﻿<Window x:Class="Chat_App.Chatting_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Converter="clr-namespace:Chat_App.Converter"
+        Title="AllChat" Height="650" Width="900" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" >   
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        
+        <ListBox x:Name="friend_list" Background="Gray" Foreground="White" Grid.Column="0" SelectionChanged="friend_list_SelectionChanged" >
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Path=ImagePath}" Width="40" Height="40" Stretch="Fill" />
+                        <TextBlock Text="{Binding Path=FriendName}" VerticalAlignment="Center" FontSize="20" Margin="5, 0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".5*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Converter:AlignmentDirectionConverter x:Key="AlignmentConverter"/>
+                <Converter:ColorConverter x:Key="ColorConverter" />
+            </Grid.Resources>
+            
+            
+            <TextBlock Grid.Row="0" x:Name="currentFriend" Text="{Binding Path=SelectedValue.FriendName, ElementName=friend_list}" HorizontalAlignment="Center" TextAlignment="Center" Width="600" FontSize="20" Background="#FF6CB490" />
+
+            <ListBox x:Name="List_message" Grid.Row="1" HorizontalContentAlignment="Stretch" BorderThickness="0">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border HorizontalAlignment="{Binding Path=Sender, Converter={StaticResource AlignmentConverter} }" Margin="5" Padding="5" BorderThickness="1" BorderBrush="Black" Background="{Binding Path=Sender, Converter={StaticResource ColorConverter}}" CornerRadius="5" >
+                            <StackPanel Orientation="Vertical"> 
+                                <TextBlock Text="{Binding Path=MessageInfo}" />
+                                <TextBlock Text="{Binding Path=TimeStamp}" FontSize="10" Margin="0, 5" TextAlignment="Right" />
+                            </StackPanel>
+                        </Border>     
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                <TextBox x:Name="sending_message" TextWrapping="Wrap" AcceptsReturn="True" Width="490" FontSize="15"/>
+                <Button x:Name="btn_send" Content="Send" Width="100" Click="btn_send_Click"/>
+            </StackPanel>
+        
+        </Grid>
+    </Grid>
+</Window>
