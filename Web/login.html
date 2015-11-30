@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Parse App</title>
+  <title>Chat App</title>
   <meta name="description" content="My Parse App">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/reset.css">
@@ -14,7 +14,7 @@
 <body>
 <h1>Log In</h1>
       
-      <form id="login">
+      <form id="login" action="index.html">
          <p><input id="login-name" type="text"></p>
          <p><input id="login-password" type="password"></p>
          <p><input id="login-submit" type="submit" value="Log In"></p>
@@ -23,8 +23,26 @@
    
     
     <script type="text/javascript">
-     Parse.initialize("dZ74uCxAUOOENhjY272iOCj6N8wc2xpowb95iRBH", "lj35BG28xcikpUMVnayTSVaCBvFrG2YEovliQDQ3");
+    Parse.initialize("6GDVKxEbjD12uv4BCBwBG14O4A0lha677JrSFOt7", "kaSnkEa2P1Gh9C8Bq4escEHHR8dTxqnsY2glzbcH");
+
       var Post=Parse.Object.extend("Post");
+       
+     
+        $("#login").submit(function(event){
+            event.preventDefault();
+            
+            var name=$("#login-name").val();
+            var pass=$("#login-password").val();
+            
+            Parse.User.logIn(name,pass,{
+                success:function(){
+                window.location.href="index.html"; 
+                    console.log("login succes");
+                },error:function(user,error){
+                    console.log("error"+error.message);
+                }
+            });
+        });
       
     </script>
 
