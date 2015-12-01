@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Parse App</title>
+  <title>Chat App</title>
   <meta name="description" content="My Parse App">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/reset.css">
@@ -16,54 +16,60 @@
   
   <div id="main">
       
-      <div id="current-user"></div>
-   <!--   <h1>Log Out</h1>-->
+    
+   <h1>Chat App</h1>
       
-     <!-- <form id="logout">
+      <form id="logout">
           <p><input id="logout-submit" type="submit" value="Log Out"></p>
       </form>
       
-      <h1>Log In</h1>
-      
-      <form id="login">
-         <p><input id="login-name" type="text"></p>
-         <p><input id="login-password" type="password"></p>
-         <p><input id="login-submit" type="submit" value="Log In"></p>
-      </form>
-      
-      <h1>Sign Up</h1>
-    
-    <form id="signup">
-        <p><input id="signup-name" type="text"></p>
-        <p><input id="signup-password" type="password"></p>
-        <p><input id="signup-submit" type="submit" value="Sign Up"></p>
-    </form>-->
-      
-      <h1>Chat App</h1>
-      
+       <textarea id="post-list" rows="15" cols="50" id="aboutDescription"
+    style="max-height:100px;min-height:200px; resize: none"></textarea>
+     
       <form id="post-form">
           <p><textarea id="post-content" rows="3" cols="50"></textarea></p>
           <p><button id="post-submit">submit</button></p>
           
       </form>
       
-      <textarea id="post-list" rows="15" cols="50" id="aboutDescription"
-    style="max-height:100px;min-height:200px; resize: none"></textarea>
+     
       
   </div>
     
     <script type="text/javascript">
-     Parse.initialize("dZ74uCxAUOOENhjY272iOCj6N8wc2xpowb95iRBH", "lj35BG28xcikpUMVnayTSVaCBvFrG2YEovliQDQ3");
-      var Post=Parse.Object.extend("Post");
+     Parse.initialize("6GDVKxEbjD12uv4BCBwBG14O4A0lha677JrSFOt7", "kaSnkEa2P1Gh9C8Bq4escEHHR8dTxqnsY2glzbcH");
+
+      var Post=Parse.Object.extend("message");
         
-        /*For posting*/
+        
+   function checkLogin(){
+        if (Parse.User.current()){
+            //console.log("Logged In"+Parse.User.current().get("sender"));
+            $("#current-user").html("user: "+Parse.User.current().get("sender"));
+        }
+          else{
+            $("#current-user").html("");
+          }
+      }
+       
+       
+      
+     /* User LogOut*/
+       $("#logout").submit(function(event){
+            event.preventDefault();
+          window.location.href="login.html"; 
+          Parse.User.logOut();
+           checkLogin();
+      });
+        
+       /*For posting the data*/
         $("#post-form").submit(function(event){
             event.preventDefault();
             
             var content= $("#post-content").val();
             
             var newPost=new Post();
-            newPost.set("chat",content);
+            newPost.set("message",content);
             
             newPost.save(
                 {success:function(){
@@ -81,20 +87,25 @@
         function getPosts(){
             var query= new Parse.Query(Post);
             query.find({success:function(results){
+                var output="";
                     for(var i in results){
-                    var chat=results[i].get("chat");
-                        output+="<p>"+chat+"</p>";
+                    var chat=results[i].get("message");
+//                        output+="<br>";
+                        output+='\n' + chat;                    
                     } 
-                  $("#list-posts").html(output);
-                },
-                 error:function(error){
+                  $("#post-list").html(output);
+                
+                },error:function(error){
                   console.log("error:"+error.message)    
                  }
                 });
            
         }
-      
-        getPosts();
+       $("#post-form").submit(function(){
+             getPosts();
+           
+       });
+       
       
         
   
