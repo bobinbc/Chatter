@@ -1,0 +1,636 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<title>JIRA</title>
+<style type="text/css">
+table {
+    mso-displayed-decimal-separator:"\.";
+    mso-displayed-thousand-separator:"\,";
+}
+body
+{
+    margin: 0px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    color:black;
+}
+
+</style>
+<META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+<!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+<!--
+Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+since Excel does not use or save the css files it is hardcoded here.
+-->
+<style>
+@page
+{
+mso-page-orientation:landscape;
+margin:.25in .25in .5in .25in;
+mso-header-margin:.5in;
+mso-footer-margin:.25in;
+mso-footer-data:"&R&P of &N";
+mso-horizontal-page-align:center;
+mso-vertical-page-align:center;
+}
+
+td.issuekey,
+td.issuetype,
+td.status {
+    mso-style-parent: "";
+    mso-number-format: \@;
+    text-align: left;
+}
+br
+{
+    mso-data-placement:same-cell;
+}
+
+td
+{
+    vertical-align: top;
+}
+</style>
+
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook>
+<x:ExcelWorksheets>
+<x:ExcelWorksheet>
+<x:Name>general_report</x:Name>
+<x:WorksheetOptions>
+<x:Print>
+<x:ValidPrinterInfo/>
+</x:Print>
+</x:WorksheetOptions>
+</x:ExcelWorksheet>
+</x:ExcelWorksheets>
+</x:ExcelWorkbook>
+</xml><![endif]-->
+</head>
+<body>
+
+<table border="1">
+    <tr bgcolor="#205081" height="30">
+        <td colspan="11">
+            <img src="https://chatter.atlassian.net/images/icon-jira-logo.png" width="57" height="30" border="0" alt="JIRA">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            <a href="https://chatter.atlassian.net/issues/?jql=">JIRA</a>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="11">
+            Displaying <strong>17</strong> issues at <strong>02/Dec/15 9:14 PM</strong>.
+        </td>
+    </tr>
+</table>
+
+
+
+
+                                        <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-issuetype" data-id="issuetype">
+                            Issue Type
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-assignee" data-id="assignee">
+                            Assignee
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-reporter" data-id="reporter">
+                            Reporter
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-priority" data-id="priority">
+                            Priority
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10100" data-id="customfield_10100">
+                            Fix in Current Release?
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-status" data-id="status">
+                            Status
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-created" data-id="created">
+                            Created
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-duedate" data-id="duedate">
+                            Due Date
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                            Description
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow10017" rel="10017" data-issuekey="CHAT-18" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-18" href="https://chatter.atlassian.net/browse/CHAT-18">CHAT-18</a>
+</td>
+                                            <td class="summary"><p>
+                when switching user in the user list, the displayed messages are not correct. 
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 02/Dec/15 7:03 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      When I switch the user in the user list (dropdown list), the history messages that belong to the previous user doesn&#39;t disappear. 
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10016" rel="10016" data-issuekey="CHAT-17" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-17" href="https://chatter.atlassian.net/browse/CHAT-17">CHAT-17</a>
+</td>
+                                            <td class="summary"><p>
+                On web app, when the user logout and login, the use select list duplicate the usernames in the list.
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 02/Dec/15 6:50 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      This bug is supposed the be when adding the usernames as the options of a select, the code doesn&#39;t remove the previous options, which are usernames.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10014" rel="10014" data-issuekey="CHAT-15" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-15" href="https://chatter.atlassian.net/browse/CHAT-15">CHAT-15</a>
+</td>
+                                            <td class="summary"><p>
+                Sender is hard coded
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Nithin KJ
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100">    No
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="created"> 02/Dec/15 3:09 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      The mobile app the sender is hard coded. So Only certain user can use it. It is generic..
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10013" rel="10013" data-issuekey="CHAT-14" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-14" href="https://chatter.atlassian.net/browse/CHAT-14">CHAT-14</a>
+</td>
+                                            <td class="summary"><p>
+                 no login for mobile version..
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Nithin KJ
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100">    No
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="created"> 02/Dec/15 2:37 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      There is no login for the mobile version . so it is not ideal for all the users...
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10012" rel="10012" data-issuekey="CHAT-13" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-13" href="https://chatter.atlassian.net/browse/CHAT-13">CHAT-13</a>
+</td>
+                                            <td class="summary"><p>
+                message is not received immediately when sent 
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Nithin KJ
+    </td>
+                                            <td class="priority">           Low
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 9:00 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      The message has a lag on the mobile device when it is sent from an alternate device<br/>
+
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10011" rel="10011" data-issuekey="CHAT-12" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-12" href="https://chatter.atlassian.net/browse/CHAT-12">CHAT-12</a>
+</td>
+                                            <td class="summary"><p>
+                No users displaying in drop down
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 8:58 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      There are no users displaying when the app loads, to show the users.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10010" rel="10010" data-issuekey="CHAT-11" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-11" href="https://chatter.atlassian.net/browse/CHAT-11">CHAT-11</a>
+</td>
+                                            <td class="summary"><p>
+                No way to send messages
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 8:57 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      Cannot send messages. No button.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10009" rel="10009" data-issuekey="CHAT-10" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-10" href="https://chatter.atlassian.net/browse/CHAT-10">CHAT-10</a>
+</td>
+                                            <td class="summary"><p>
+                Not filter the messages retrieved from parse by message sender
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 4:53 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      In the web app, the user can see all the messages in the parse, this is not correct. In the query, should filter the messages by &#39;sender&#39; and &#39;receiver&#39;. Only after doing this, the user can get the relevant messages instead of the messages that are sent to other users.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10008" rel="10008" data-issuekey="CHAT-9" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-9" href="https://chatter.atlassian.net/browse/CHAT-9">CHAT-9</a>
+</td>
+                                            <td class="summary"><p>
+                The message saved from mobile app cannot be retrieved by other applications 
+    </p>
+</td>
+                                            <td class="assignee">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           High
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 4:16 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      We figured out the reason is because in the ACL field, there is no read and write.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10007" rel="10007" data-issuekey="CHAT-8" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-8" href="https://chatter.atlassian.net/browse/CHAT-8">CHAT-8</a>
+</td>
+                                            <td class="summary"><p>
+                The message saved to parse without &#39;sender&#39; and &#39;receiver&#39; field
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 4:14 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      Sender and Receiver are empty in Parse. Data is still being saved.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10006" rel="10006" data-issuekey="CHAT-7" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-7" href="https://chatter.atlassian.net/browse/CHAT-7">CHAT-7</a>
+</td>
+                                            <td class="summary"><p>
+                The message wasn&#39;t validated before sending to parse
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 01/Dec/15 2:47 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      Two blank message record has been found in parse, and cause the program exception. 
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10005" rel="10005" data-issuekey="CHAT-6" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-6" href="https://chatter.atlassian.net/browse/CHAT-6">CHAT-6</a>
+</td>
+                                            <td class="summary"><p>
+                The web terminal can&#39;t login
+    </p>
+</td>
+                                            <td class="assignee">            Nithin KJ
+    </td>
+                                            <td class="reporter">            Alex Yan
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 30/Nov/15 12:51 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      when i clicked login, I got an error in the console, telling me the &#39;output&#39; is undefined.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10004" rel="10004" data-issuekey="CHAT-5" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-5" href="https://chatter.atlassian.net/browse/CHAT-5">CHAT-5</a>
+</td>
+                                            <td class="summary"><p>
+                Send button enabled with empty text
+    </p>
+</td>
+                                            <td class="assignee">            Alex Yan
+    </td>
+                                            <td class="reporter">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="priority">           Lowest
+    </td>
+                                            <td class="customfield_10100">    No
+</td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;To Do&lt;/span&gt;">To Do</span>    </td>
+                                            <td class="created"> 30/Nov/15 12:04 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      Send button isnt disabled when the text is empty.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10003" rel="10003" data-issuekey="CHAT-4" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-4" href="https://chatter.atlassian.net/browse/CHAT-4">CHAT-4</a>
+</td>
+                                            <td class="summary"><p>
+                Duplicate messages on loading
+    </p>
+</td>
+                                            <td class="assignee">            Alex Yan
+    </td>
+                                            <td class="reporter">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 30/Nov/15 12:03 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      Duplicate messages when loaded from the database
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10002" rel="10002" data-issuekey="CHAT-3" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-3" href="https://chatter.atlassian.net/browse/CHAT-3">CHAT-3</a>
+</td>
+                                            <td class="summary"><p>
+                No validation checking on login
+    </p>
+</td>
+                                            <td class="assignee">            Alex Yan
+    </td>
+                                            <td class="reporter">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 30/Nov/15 12:01 PM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      There are no validation checks while logging in, such as blank entries and special characters.
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10001" rel="10001" data-issuekey="CHAT-2" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-2" href="https://chatter.atlassian.net/browse/CHAT-2">CHAT-2</a>
+</td>
+                                            <td class="summary"><p>
+                Login page is showing even after successful login
+    </p>
+</td>
+                                            <td class="assignee">            Alex Yan
+    </td>
+                                            <td class="reporter">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="priority">           Medium
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 30/Nov/15 11:59 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      After login is successful, the login page is not hidden
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow10000" rel="10000" data-issuekey="CHAT-1" class="issuerow">
+                                            <td class="issuetype">    Bug
+</td>
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="CHAT-1" href="https://chatter.atlassian.net/browse/CHAT-1">CHAT-1</a>
+</td>
+                                            <td class="summary"><p>
+                Does not redirect to chat page
+    </p>
+</td>
+                                            <td class="assignee">            Alex Yan
+    </td>
+                                            <td class="reporter">            Bobin Cherian [Administrator]
+    </td>
+                                            <td class="priority">           Highest
+    </td>
+                                            <td class="customfield_10100"></td>
+                                            <td class="status">
+                <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done aui-lozenge-subtle jira-issue-status-lozenge-max-width-medium" data-tooltip="&lt;span class=&quot;jira-issue-status-tooltip-title&quot;&gt;Done&lt;/span&gt;">Done</span>    </td>
+                                            <td class="created"> 30/Nov/15 11:59 AM </td>
+                                            <td class="duedate">    &nbsp;
+</td>
+                                            <td class="description">      When user logs in, did not go into the chat page.
+  </td>
+                    </tr>
+                </tbody>
+    </table>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#dddddd" colspan="11"><font size="1">
+        Generated at Wed Dec 02 21:14:20 EST 2015 by Bobin Cherian [Administrator] using JIRA 7.1.0-OD-02-025#71001-sha1:64a64e810c381e428fa47091a8c3b3928e783f93.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
