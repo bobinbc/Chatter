@@ -1,0 +1,93 @@
+<!doctype html>
+<head>
+  <meta charset="utf-8">
+
+  <title>My Parse App</title>
+  <meta name="description" content="My Parse App">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+
+<body>
+    <script>Parse.initialize("6GDVKxEbjD12uv4BCBwBG14O4A0lha677JrSFOt7", "kaSnkEa2P1Gh9C8Bq4escEHHR8dTxqnsY2glzbcH");</script>
+    
+    <div class="row">
+          <div class="col-md-3">
+          </div>
+          
+          <div class="col-md-6">
+              <div id="current-user"></div>
+              
+              <div class="panel panel-primary">
+                  <div class="panel-heading">
+                      <h1 class="text-center">Chat App</h1>
+                  </div>
+                  <div class="panel-body">
+                      <div id="login_area">
+                          <h1 class="text-center">Login</h1>
+
+                          <form >
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <input id="login-name" class="form-control" type="text"/>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input id="login-password" class="form-control" type="password">
+                            </div>
+                            <div>
+
+                                <input id="login" type="button" class="btn btn-info" value="Login">
+                            </div>
+                          </form>
+                      </div>    
+
+                      <div id="chatting_area">
+
+                          <div class="form-group">
+                            <label class="pull-left">Friends</label>
+                            <select id="user_list" class="form-control"></select>
+                          </div>
+                          <form id="post-form" class="form-group">
+                              <label class="pull-left">Message</label>
+                              <textarea id="post-content" rows="5" cols="50" class="form-control"></textarea>
+                              <button id="post-submit" class="btn btn-primary pull-right" style="margin-top: 10px;">submit</button>
+                          </form>
+
+                          <div class="row" style="margin-top: 50px;">
+                              <div class="table-responsive table-striped table-bordered">
+                                  <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th>#</th>
+                                        <th>Message</th>
+                                        <th>Sent Time</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="message_body">
+                                     
+                                    </tbody>
+                                  </table>
+                              </div> 
+                              
+                              <!--ul id="post_list"><li></li></ul-->
+                          </div>
+                          <button id="logout" class="btn btn-primary pull-right" style="margin-top: 30px;">Logout</button>
+                      </div>
+                </div>
+              </div>
+           </div>
+        
+           <div class="col-md-3">
+           </div>
+
+    </div>
+      
+</body>
+
+</html>
